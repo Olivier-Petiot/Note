@@ -1,0 +1,8 @@
+.wrapper_with_padding
+    #note_show
+        %h1.title= @post.title
+        %p= simple_format(@post.content)
+        
+        .buttons
+            = link_to "Edit", edit_post_path(@post), class: "button"
+            = link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure  ?"}, class: "button"
