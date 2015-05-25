@@ -34,7 +34,7 @@ class NotesController < ApplicationController
     private
     
     def find_note
-        @note = Note.find(params:[:id])
+        @note = Note.find(params[:id])
     end
     
     def note_params
