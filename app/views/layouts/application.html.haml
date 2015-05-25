@@ -6,8 +6,14 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   %link{:rel => "stylesheet", :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}/
   = csrf_meta_tags
-
-%body
+  
+  <SCRIPT type="text/javascript">
+  window.history.forward();
+  function noBack() { window.history.forward(); }
+  </SCRIPT>
+    
+%body 
+  onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload=""
   %header
     .header_inner
       = link_to image_tag('logo.svg'), root_path, id: "logo"
