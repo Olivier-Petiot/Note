@@ -1,2 +1,34 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.erb
+#banner
+    .banner_content
+        %h1 EvalExpert
+        %p Your Online Internal Control Software
+        %button= link_to "Sign up", new_user_registration_path 
+
+#testimonial
+    .wrapper
+        %p.quote The greatest Internal Control Application
+        %p.name COGIS
+    
+#callouts
+    .callout_inner
+        .wrapper
+            .callout
+                %h2 Assign objectives to your team
+                %p Texte descriptif
+            .callout
+                %h2 Discuss the practices best fitted with your team
+                %p Texte descriptif
+            .callout
+                %h2 Validate the best practices and follow up action plans
+                %p Texte descriptif
+                
+#bottom_cta
+    .wrapper
+        %h2 Apply Now
+        %p Become a new member of EvalExpert users community 
+        %button= link_to "Click here to register", new_user_registration_path
+
+%footer
+    %p &copy; COGIS CopyRight 2015
+            
+        
