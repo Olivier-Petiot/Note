@@ -1,3 +1,12 @@
 .wrapper_with_padding
     #notes.clearfix
-        %h1 This is the posts placeholder
+        - unless @posts.blank?
+            - @posts.each do |post|
+                %a{ href: (url_for [post])}
+                    .note   
+                        %p.title= post.title
+                        %p.date= time_ago_in_words(post.created_at) + " "+"ago"
+        - else 
+            %h2 Add a Post
+            %p You haven't created any posts yet
+            %button= link_to "New Post", new_post_path
