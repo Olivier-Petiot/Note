@@ -3,6 +3,13 @@
         %h1.title= @post.title
         %p= simple_format(@post.content)
         
+        #comments
+            %h2= @post.comments.count
+            %p= render @post.comments
+            
+            %h3 Reply to thread
+            = render "comments/form"
+        
         .buttons
             = link_to "Edit", edit_post_path(@post), class: "button"
             = link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure  ?"}, class: "button"
