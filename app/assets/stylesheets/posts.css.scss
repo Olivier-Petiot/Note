@@ -17,8 +17,8 @@
         border-bottom: 1px solid #D1d1d1;
         .title {
             margin: 0;
-            color: #397CAC;
-            text-decoration: none;
+            color: $dark_gray;
+            text-decoration: none;     
             font-weight: 100;
             font-size: 1.25rem;
         }
@@ -35,6 +35,15 @@
     }
 }
 
+.button {
+    color: $dark_gray;
+    border: 1px solid $dark_gray;
+    padding: .5em 1em;
+    border_radius: 0.2em;
+    text-decoration: none;
+    margin-right: 2;
+}
+
 #post_content {
     background: white;
     padding: 2em 5%;
@@ -42,7 +51,7 @@
     h1 {
         font-weight: 100;
         font-size: 2em;
-        color: #397CAC;
+        color: $dark_gray;
         margin-top: 0;
     }
     p {
@@ -52,4 +61,59 @@
         font-weight: 100;
         line-height: 1.5em;
     }
+    #comments {
+        .comment {
+            border-bottom: 1px solid #d1d1d1;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            .content {
+                width: 65%;
+                float: left;
+            }
+            .buttons {
+                width: 35%;
+                float: left;
+                font-size: .8em;
+                text-align: right;
+                padding-top: 1.5em;
+                a {
+                    color: $dark_gray;
+                    border: 1px solid $blue;
+                    padding: .5em 1em;
+                    border_radius: 0.2em;
+                    text-decoration: none;
+                    margin-right: 2%;
+                }
+            }
+            .comment_content {
+                margin: 0;
+                padding: 0;
+                font-color: $dark_gray; 
+            }
+            .comment_author {
+                color: #397CAC;
+                margin-top: .5rem;
+                font-size: 0.6em;
+                font-weight: 700;
+            }
+        }
+        input[type="submit"] {
+            background: #397CAC;
+            border: none;
+            color: white;
+            font-weight: 100;
+            padding: .5em 1em;
+            border-radius: .2em;
+            
+        }
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            border: 1px solid #d1d1d1;
+            border-radius: .2em;
+            margin: 0em;
+        }
+        
+    }
 }
+

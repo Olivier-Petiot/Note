@@ -1,6 +1,9 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
-$green: #33CD99;
+$gray: #585A5A;
+// $green: #33CD99;
+$green: #195FBB;
+$blue: #195FBB;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -41,7 +44,7 @@ body {
 button, .button {
 	border: none;
 	outline: none;
-	background: $green;
+	background: $blue;
 	padding: 1rem 3.5rem;
 	border-radius: 2rem;
 	a {
@@ -56,7 +59,7 @@ button, .button {
 }
 
 a {
-	color: $green;
+	color: $blue;
 	text-decoration: none;
 	&:hover {
 		color: $dark_gray;
@@ -64,12 +67,12 @@ a {
 }
 
 header {
-	background: $dark_gray;
+	background: $gray;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	padding: 1.75rem 0;
-	border-bottom: 7px solid $green;
+	border-bottom: 7px solid $blue;
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
@@ -87,7 +90,7 @@ header {
 				line-height: 1.5;
 				margin-left: 1rem;
 				&:hover {
-					color: $green;
+					color: $blue;
 				}
 			}
 		}
