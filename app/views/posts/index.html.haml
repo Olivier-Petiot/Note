@@ -1,11 +1,11 @@
-.wrapper_with_padding
-    #notes.clearfix
+.wrapper
+    #posts
         - unless @posts.blank?
             - @posts.each do |post|
-                %a{ href: (url_for [post])}
-                    .note   
-                        %p.title= post.title
-                        %p.date= time_ago_in_words(post.created_at) + " "+"ago"
+                .post
+                    %h2.title= link_to post.title, post
+                    %p.date= time_ago_in_words(post.created_at)
+                    %p.by= post.user.email
         - else 
             %h2 Add a Post
             %p You haven't created any posts yet

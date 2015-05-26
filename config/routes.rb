@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :posts
   
   authenticated :user do
-    root 'notes#index', as: "authenticated_root"
+    root 'posts#index', as: "authenticated_root"
   end
   
   root 'welcome#index'
