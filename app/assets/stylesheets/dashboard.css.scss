@@ -1,0 +1,60 @@
+#dashboard {
+	#notes {
+		.note {
+			background: $blue;
+			width: 15%;
+			min-height: 50px;
+			margin: 1rem 1%;
+			padding: 1.1rem 2.5%;
+			float: left;
+			border-radius: .4rem;
+			position: relative;
+			.title {
+				@include bold_font;
+				color: white;
+				margin: 0;
+				letter-spacing: 1px;
+				padding-bottom: 2em;
+				font-size: 1rem;
+			}
+			.date {
+				color: white;
+				margin: 0;
+				letter-spacing: 1px;
+				font-size: .75rem;
+			}
+		}
+	}
+	#posts {
+		.post {
+			background: $light-gray;
+			width: 30%;
+			min-height: 100px;
+			margin: 1rem 1%;
+			padding: 1.1rem 2.5%;
+			float: left;
+			border-radius: .4rem;
+			position: relative;
+			.title {
+				@include bold_font;
+				color: white;
+				margin: 0;
+				letter-spacing: 1px;
+				padding-bottom: 2em;
+				font-size: 1rem;
+			}
+			.date {
+				color: white;
+				margin: 0;
+				letter-spacing: 1px;
+				font-size: .75rem;
+			}
+			.comment_count {
+				bottom: .25rem;
+				color: $pale_blue;
+				font-size: .7rem;
+				margin-bottom: .7rem;
+			}
+		}
+	}
+}

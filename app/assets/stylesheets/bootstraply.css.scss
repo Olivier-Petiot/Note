@@ -1,0 +1,11 @@
+.panel-body {
+    background:#FFCCFF;
+}.panel-heading {
+    background:#AEBA00;
+}
+.panel-body-padding {
+    left: 1em;
+}
+
+@import "bootstrap-sprockets";
+@import "bootstrap";

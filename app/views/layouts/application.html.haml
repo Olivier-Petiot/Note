@@ -11,9 +11,9 @@
   window.history.forward();
   function noBack() { window.history.forward(); }
   </SCRIPT>
+  onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload=""
     
 %body 
-  onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload=""
   %header
     .header_inner
       = link_to image_tag('Eval-Expert_icon.png'), root_path, id: "logo"
