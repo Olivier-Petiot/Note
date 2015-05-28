@@ -1,9 +1,11 @@
 $dark_gray: #2B2E2E;
-$light_gray: #C0C1C1;
+$light_gray: #777570;
+// #C0C0C0;
 $gray: #585A5A;
 // $green: #33CD99;
 $green: #195FBB;
 $blue: #195FBB;
+$red: #BD1926;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -67,7 +69,7 @@ a {
 }
 
 header {
-	background: $gray;
+	background: $light-gray;
 	position: fixed;
 	top: 0;
 	width: 100%;

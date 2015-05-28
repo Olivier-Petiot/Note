@@ -17,6 +17,8 @@ class PostsController < ApplicationController
     
     def create
         @post = current_user.posts.build(post_params)
+        @comment = @post.comments.create(params[:comment].permit(:comment))
+        @comment.user_id = current_user.id if current_user
         
         if @post.save
             redirect_to @post
