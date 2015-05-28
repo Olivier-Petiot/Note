@@ -1,13 +1,12 @@
-.wrapper_with_padding
-    #notes.clearfix
+.list-group
+    %a.list-group-item.active{:href => "#"}
         - unless @posts.blank?
             - @posts.each do |post|
-                %a{ href: (url_for [post])}
-                    .note   
-                        %p.title= post.title
-                        %p.date= "Created"+ " "+time_ago_in_words(post.created_at) + " "+"ago"
-                        %p.date= post.user.email
-                        %p.comment_count= pluralize post.comments.count, "comment" 
+                %h4.list-group-item-heading= post.title
+                %p.list-group-item-text= "Created"+ " "+time_ago_in_words(post.created_at) + " "+"ago"
+                %p.list-group-item-text= post.user.email
+                %p.list-group-item-text= pluralize post.comments.count, "comment" 
+
         - else 
             %h2 Add a Post
             %p You haven't created any posts yet
