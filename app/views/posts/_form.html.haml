@@ -1,4 +1,6 @@
+
 = simple_form_for @post do |f|
+	= f.collection_select(:pro_id, @pros, :id, :name, prompt: "Veuillez sélectionner un processus")
 	= f.input :title
 	= f.input :content
 	= f.button :submit, class: "button"

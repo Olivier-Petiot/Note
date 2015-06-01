@@ -5,6 +5,7 @@
                 %a{ href: (url_for [post])}
                     .note   
                         %p.title= post.title
+                        %p.process= post.pro.name
                         %p.date= "Created"+ " "+time_ago_in_words(post.created_at) + " "+"ago"
                         %p.date= post.user.email
                         %p.comment_count= pluralize post.comments.count, "comment" 

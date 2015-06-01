@@ -1,49 +1,54 @@
-.wrapper_with_padding
-    #dashboard.clearfix
-        #posts
-            - unless @posts.blank?
-                %h2
-                    Active Posts (
-                    = @posts.count
-                    )
-                    
-                - @posts.each do |post|
-                    %a{ href: (url_for [post])}
-                        .post   
-                            %p.title= post.title
-                            %p.date
-                                Created
-                                = time_ago_in_words(post.created_at)
-                                ago by
-                                = post.user.email
-                            %p.comment_count= pluralize post.comments.count, "comment" 
-            - else 
-                %h2 Add a Post
-                %p You haven't created any posts yet
-                %button= link_to "New Post", new_post_path
-                
-    #dashboard.clearfix
-        #notes
-            - unless @notes.blank?
-                %h2
-                    Active Notes (
-                    = @notes.count
-                    )
-                - @notes.each do |note|
-                    %a{ href: (url_for [note])}
-                        .note   
-                            %p.title= note.title
-                            %p.date
-                                Created
-                                = time_ago_in_words(note.created_at)
-                                ago
-            - else 
-                %h2 Add a note
-                %p You haven't created any notes yet
-                %button= link_to "New Note", new_note_path
-                
 .panel.panel-primary
     .panel-heading
-        %h3.panel-title 301 Moved Permanently
+        Posts
     .panel-body
-    The requested page has been permanently moved to a new location.
+        #dashboard
+            #posts
+                - unless @posts.blank?
+                    %h2
+                        Active Posts (
+                        = @posts.count
+                        )
+                    
+                    - @posts.each do |post|
+                        %a{ href: (url_for [post])}
+                            .post   
+                                %p.title= post.title
+                                %p.date
+                                    Processus:
+                                    = post.pro.name
+                                %br
+                                %p.date
+                                    Created
+                                    = time_ago_in_words(post.created_at)
+                                    ago by
+                                    = post.user.email
+                                %p.comment_count= pluralize post.comments.count, "comment" 
+                - else 
+                    %h2 Add a Post
+                    %p You haven't created any posts yet
+                    %button= link_to "New Post", new_post_path
+                
+    .panel-heading
+        Notes
+    .panel-body
+        #dashboard
+            #notes
+                - unless @notes.blank?
+                    %h2
+                        Active Notes (
+                        = @notes.count
+                        )
+                    - @notes.each do |note|
+                        %a{ href: (url_for [note])}
+                            .note   
+                                %p.title= note.title
+                                %p.date
+                                    Created
+                                    = time_ago_in_words(note.created_at)
+                                    ago
+                - else 
+                    %h2 Add a note
+                    %p You haven't created any notes yet
+                    %button= link_to "New Note", new_note_path
+                

@@ -1,17 +1,17 @@
 !!!
 %html
 %head
-  %title Online Notebook
+  %title EvalExpert
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   %link{:rel => "stylesheet", :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}/
   = csrf_meta_tags
   
-  <SCRIPT type="text/javascript">
-  window.history.forward();
-  function noBack() { window.history.forward(); }
-  </SCRIPT>
-  onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload=""
+  // <SCRIPT type="text/javascript">
+  // window.history.forward();
+  // function noBack() { window.history.forward(); }
+  // </SCRIPT>
+  // onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload=""
     
 %body 
   %header
@@ -24,7 +24,11 @@
           = link_to "Sign Out", destroy_user_session_path, method: :delete  
         - else
           = link_to "Log in", new_user_session_path
-  %p.notice= notice
-  %p=alert= alert
+  %br
+  %br
+  %p.notice
+    = notice
+  %p
+    = alert
   
   = yield

@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
   resources :notes
   resources :dashboard  
+  
   resources :posts do
-    resources :comments
-
+    resources :comments, except: [:show, :index]
   end
   
   authenticated :user do

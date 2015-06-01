@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     
     def new
         @post = current_user.posts.build
+        @pros = Pro.all
     end
     
     def show
@@ -25,6 +26,7 @@ class PostsController < ApplicationController
     end
     
     def edit
+        @pros = Pro.all
     end
     
     def update
@@ -48,7 +50,7 @@ class PostsController < ApplicationController
     end
     
     def post_params
-        params.require(:post).permit(:title, :content)
+        params.require(:post).permit(:title, :content, :pro_id)
     end
     
 end

@@ -1,6 +1,11 @@
 #post_content
     %h1.title= @post.title
     %p= simple_format(@post.content)
+    %p.date
+    Processus:
+    = @post.pro.name
+    %br
+    %br
         
     #comments
         .comment
