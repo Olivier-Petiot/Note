@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601125127) do
+ActiveRecord::Schema.define(version: 20150602072033) do
 
   create_table "comments", force: true do |t|
     t.text     "comment"
@@ -51,6 +51,24 @@ ActiveRecord::Schema.define(version: 20150601125127) do
 
   create_table "pros", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "todo_items", force: true do |t|
+    t.string   "content"
+    t.integer  "todo_list_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "todo_items", ["todo_list_id"], name: "index_todo_items_on_todo_list_id"
+
+  create_table "todo_lists", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.integer  "pro_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
