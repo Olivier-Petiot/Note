@@ -1,5 +1,18 @@
-%h1 Edit Comment
+.wrapper_with_padding
+    %h1 Edit Comment
 
-= simple_form_for([@post, @comment]) do |f|
-    = f.input :comment
-    = f.submit
+    = simple_form_for([@post, @comment]) do |f|
+        .field
+            %p= f.input :rating
+            // .star-rating{:dscore => @comment.rating}
+            %p= f.input :comment
+            = f.submit
+    
+:javascript
+    $('.star-rating').raty({
+        path: '/assets/',
+        readOnly: false,
+        score: function() {
+            return $(this).attr('dscore');
+        }});    
+    

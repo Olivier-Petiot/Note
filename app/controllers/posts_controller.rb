@@ -13,7 +13,13 @@ class PostsController < ApplicationController
     end
     
     def show
-       
+        @comments = Comment.where(post_id: @post.id).order("created_at DESC")
+        if @comments.blank?
+            @avg_rating = 0
+        else
+            @avg_rating = @comments.average(:rating).round(2)
+        end
+    
     end
     
     def create
@@ -27,6 +33,7 @@ class PostsController < ApplicationController
     
     def edit
         @pros = Pro.all
+        @comment = Comment.where(post_id: @post.id).order("created_at DESC")
     end
     
     def update
@@ -50,7 +57,7 @@ class PostsController < ApplicationController
     end
     
     def post_params
-        params.require(:post).permit(:title, :content, :pro_id)
+        params.require(:post).permit(:title, :content, :pro_id, :rating)
     end
     
 end

@@ -68,11 +68,21 @@
         font-weight: 100;
         line-height: 1.5em;
     }
+    .processus {
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        color: blue;
+    }
+    .rating {
+        border-bottom: 1px solid #d1d1d1;
+        padding-bottom: 1em;
+    }
     #comments {
         .comment {
             border-bottom: 1px solid #d1d1d1;
             padding-bottom: 1em;
             margin-bottom: 1em;
+            padding-left: 2em;
             .content {
                 width: 65%;
                 float: left;
@@ -83,6 +93,24 @@
                 font-size: .8em;
                 text-align: right;
                 padding-top: 1.5em;
+                margin-left: 0em;
+                a {
+                    color: $dark_gray;
+                    border: 1px solid $blue;
+                    padding: .5em 1em;
+                    border_radius: 0.2em;
+                    text-decoration: none;
+                    margin-right: 2%;
+                }
+            }
+            .bottom_buttons {
+                width: 35%;
+                float: left;
+                font-size: .8em;
+                text-align: right;
+                padding-top: 1.5em;
+                margin-left: 0em;
+                padding-left: 0em;
                 a {
                     color: $dark_gray;
                     border: 1px solid $blue;
