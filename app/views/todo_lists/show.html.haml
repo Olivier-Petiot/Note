@@ -1,19 +1,14 @@
-%p
-  #notice
-  =notice
-
-%p
-  %strong Title
-  = @todo_list.title
-
-%p
-  %strong Description
-  = @todo_list.description
-
-#todo_items_wrapper
-  = render @todo_list.todo_items
-  #form
-    = render "todo_items/form"
-
-= link_to 'Edit', edit_todo_list_path(@todo_list)
-= link_to 'Back', todo_lists_path
+.container
+  %h2.todo_list_title
+    = link_to @todo_list.title, @todo_list
+  %p.todo_list_sub_title
+    = @todo_list.description
+  
+  #todo_items_wrapper
+    = render @todo_list.todo_items
+    #form
+      = render "todo_items/form"
+  .links
+    = link_to 'Edit', edit_todo_list_path(@todo_list)
+    = link_to 'Delete', todo_list_path(@todo_list), method: :delete
+    = link_to 'Back', todo_lists_path

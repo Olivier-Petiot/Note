@@ -1,0 +1,8 @@
+= simple_form_for(@todo_list) do |f|
+  = f.error_notification
+  
+  .form-input
+    = f.input :title
+    = f.input :description
+  .form-actions
+    = f.button :submit
