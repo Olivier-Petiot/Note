@@ -18,10 +18,12 @@ class TodoListsController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
     @todo_list = TodoList.new(todo_list_params)
+    @todo_list.user_id = current_user.id if current_user
     @todo_list.save
     respond_with(@todo_list)
   end
