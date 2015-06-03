@@ -1,7 +1,7 @@
 #dashboard {
 	#notes {
 		.note {
-			background: $blue;
+			background: $light_beige;
 			width: 15%;
 			min-height: 50px;
 			margin: 1rem 1%;
@@ -27,7 +27,7 @@
 	}
 	#posts {
 		.post {
-			background: $light-gray;
+			background: $dark_beige;
 			width: 30%;
 			min-height: 100px;
 			margin: 1rem 1%;
@@ -41,26 +41,26 @@
 				margin: 0;
 				letter-spacing: 1px;
 				padding-bottom: 2em;
-				font-size: 1rem;
+				font-size: 1.5rem;
 			}
 			.process {
 				// @include bold_font;
-				color: white;
+				color: $light_beige;
 				margin: 0;
 				letter-spacing: .3px;
-				padding-bottom: 2em;
+				padding-bottom: 1em;
 				font-size: 1rem;
 			}
 			.date {
 				color: white;
 				margin: 0;
 				letter-spacing: 1px;
-				font-size: .75rem;
+				font-size: .8rem;
 			}
 			.comment_count {
 				bottom: .25rem;
-				color: $pale_blue;
-				font-size: .7rem;
+				color: $red;
+				font-size: .8rem;
 				margin-bottom: .7rem;
 			}
 		}

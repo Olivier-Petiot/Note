@@ -1,30 +1,31 @@
-#post_content
-    %h1.title= @post.title
-    %p= simple_format(@post.content)
-    %p.date
-    %p.processus
-        Process involved:
-        = @post.pro.name
-    // %br
-    // .star-rating{:dscore => @post.rating}
-    // %br
-    .rating
-        =pluralize( @post.comments.count, "comment")
-        %br
-        Average rating 
-        .star-rating{:dscore => @avg_rating}
-
-    #comments
-        %p= render @post.comments
-        .comment   
-            %h3 Give your view
-            = render "comments/form"
-            %p
+#post
+    #post_content
+        %h1.title= @post.title
+        %p= simple_format(@post.content)
+        %p.date
+        %p.processus
+            Process involved:
+            = @post.pro.name
+        // %br
+        // .star-rating{:dscore => @post.rating}
+        // %br
+        .rating
+            =pluralize( @post.comments.count, "comment")
             %br
-            .bottom_buttons
-                = link_to "Edit Post", edit_post_path(@post)
-                = link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure  ?"}
-                = link_to "Home", root_path
+            Average rating 
+            .star-rating{:dscore => @avg_rating}
+    
+        #comments
+            %p= render @post.comments
+            .comment   
+                %h3 Give your view
+                = render "comments/form"
+                %p
+                %br
+                .bottom_buttons
+                    = link_to "Edit Post", edit_post_path(@post)
+                    = link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure  ?"}
+                    = link_to "Home", root_path
 :javascript
     $('.star-rating').raty({
         path: '/assets/',

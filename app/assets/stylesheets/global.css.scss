@@ -1,12 +1,7 @@
-$dark_gray: #2B2E2E;
-$light_gray: #777570;
-// #C0C0C0;
-$gray: #585A5A;
-// $green: #33CD99;
-$green: #195FBB;
-$blue: #195FBB;
-$red: #BD1926;
-$pale_blue: #9FC8FD;
+$red: #A40F37;
+$brown: #323232;
+$dark_beige: #A8ABA2;
+$light_beige: #EDEDED;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -47,35 +42,42 @@ body {
 button, .button {
 	border: none;
 	outline: none;
-	background: $blue;
+	color: $light_beige;
+	background: $red;
 	padding: 1rem 3.5rem;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	a {
-		color: white;
+		color: $light_beige;
 		text-decoration: none;
+	}
+	&:hover {
+		color: white;
+		background: $dark_beige;
 	}
 }
 
 .button {
-	color: white;
+	color: $light_beige;
 	margin: 2rem 0;
 }
 
 a {
-	color: $blue;
+	color: $light_beige;
 	text-decoration: none;
 	&:hover {
-		color: $dark_gray;
+		color: $red;
+		background: $light_beige;
+		
 	}
 }
 
 header {
-	background: $light-gray;
+	background: $light_beige;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	padding: 1.75rem 0;
-	border-bottom: 7px solid $blue;
+	border-bottom: 7px solid $red;
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
@@ -88,12 +90,18 @@ header {
 			float: right;
 			a {
 				text-decoration: none;
-				color: white;
-				font-size: 1.1rem;
+				color: $light_beige;
+				font-size: 1.2rem;
 				line-height: 1.5;
 				margin-left: 1rem;
+				border: none;
+				outline: none;
+				background: $red;
+				padding: 1rem 3.5rem;
+				border-radius: 1rem;
 				&:hover {
-					color: $blue;
+					color: white;
+					background: $dark_beige;
 				}
 			}
 		}
@@ -101,7 +109,7 @@ header {
 }
 
 footer {
-	background: $dark_gray;
+	background: $dark_beige;
 	width: 100%;
 	padding: 2rem 0;
 	color: white;
@@ -109,14 +117,14 @@ footer {
 	@include bold_font;
 	p {
 		margin: 0;
-		font-size: .85rem;
+		font-size: .1rem;
 	}
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
 	margin-bottom: 1rem;
-	border: 1px solid $light_gray;
+	border: 1px solid $light_beige;
 	border-radius: .4rem;
 }
 
@@ -126,4 +134,16 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 textarea {
 	min-height: 200px;
+}
+
+.panel {
+	margin-left: 10px;
+	.panel-body {
+		background: $light_beige;
+		margin-bottom: 10px;
+	}
+	.panel-heading {
+		background: $red;
+		color: $light_beige;
+	}
 }

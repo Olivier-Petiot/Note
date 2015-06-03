@@ -17,14 +17,14 @@
         border-bottom: 1px solid #D1d1d1;
         .title {
             margin: 0;
-            color: $dark_gray;
+            color: $dark_beige;
             text-decoration: none;     
             font-weight: 100;
             font-size: 1.25rem;
         }
         .process {
             margin: 0;
-            color: $dark_gray;
+            color: $dark_beige;
             text-decoration: none;     
             font-weight: 50;
             font-size: 1rem;
@@ -43,110 +43,115 @@
 }
 
 .button {
-    color: $dark_gray;
-    border: 1px solid $dark_gray;
+    color: light_beige;
+    border: 1px solid $dark_beige;
     padding: .5em 1em;
     border_radius: 0.2em;
     text-decoration: none;
     margin-right: 2;
 }
 
-#post_content {
-    padding: 2em 5%;
-    border-radius: .5em;
-    h1 {
-        font-weight: 100;
-        font-size: 2em;
-        color: black;
-        margin-top: 0;
-        background: white;
-    }
-    p {
-        margin-top: 0.9em;
-        color: $dark_gray;
-        font-size: 1.5rem;
-        font-weight: 100;
-        line-height: 1.5em;
-    }
-    .processus {
-        padding-bottom: 1em;
-        margin-bottom: 1em;
-        color: blue;
-    }
-    .rating {
-        border-bottom: 1px solid #d1d1d1;
-        padding-bottom: 1em;
-    }
-    #comments {
-        .comment {
-            border-bottom: 1px solid #d1d1d1;
+#post {
+    background: $light_beige;
+    margin: 1em 1em;
+    #post_content {
+        padding: 1em 5%;
+        border-radius: .5em;
+        background: $dark_beige;
+        h1 {
+            font-weight: 100;
+            font-size: 2em;
+            color: $red;
+            margin-top: 0;
+            background: $brown;
+        }
+        p {
+            margin-top: 0.9em;
+            color: $red;
+            font-size: 1.5rem;
+            font-weight: 100;
+            line-height: 1.5em;
+        }
+        .processus {
             padding-bottom: 1em;
             margin-bottom: 1em;
-            padding-left: 2em;
-            .content {
-                width: 65%;
-                float: left;
-            }
-            .buttons {
-                width: 35%;
-                float: left;
-                font-size: .8em;
-                text-align: right;
-                padding-top: 1.5em;
-                margin-left: 0em;
-                a {
-                    color: $dark_gray;
-                    border: 1px solid $blue;
-                    padding: .5em 1em;
-                    border_radius: 0.2em;
-                    text-decoration: none;
-                    margin-right: 2%;
+            color: $red;
+        }
+        .rating {
+            border-bottom: 1px solid #d1d1d1;
+            padding-bottom: 1em;
+        }
+        #comments {
+            .comment {
+                border-bottom: 1px solid #d1d1d1;
+                padding-bottom: 1em;
+                margin-bottom: 1em;
+                padding-left: 2em;
+                .content {
+                    width: 65%;
+                    float: left;
+                }
+                .buttons {
+                    width: 35%;
+                    float: left;
+                    font-size: .8em;
+                    text-align: right;
+                    padding-top: 1.5em;
+                    margin-left: 0em;
+                    a {
+                        color: $light_beige;
+                        border: 1px solid $dark_beige;
+                        padding: .5em 1em;
+                        border_radius: 0.2em;
+                        text-decoration: none;
+                        margin-right: 2%;
+                    }
+                }
+                .bottom_buttons {
+                    width: 35%;
+                    float: left;
+                    font-size: .8em;
+                    text-align: right;
+                    padding-top: 1.5em;
+                    margin-left: 0em;
+                    padding-left: 0em;
+                    a {
+                        color: $light_beige;
+                        border: 1px solid $dark_beige;
+                        padding: .5em 1em;
+                        border_radius: 0.2em;
+                        text-decoration: none;
+                        margin-right: 2%;
+                    }
+                }
+                .comment_content {
+                    margin: 0;
+                    padding: 0;
+                    font-color: $dark_beige; 
+                    font-size: 1.2rem;
+                }
+                .comment_author {
+                    color: #397CAC;
+                    margin-top: .5rem;
+                    font-size: 0.6em;
+                    font-weight: 700;
                 }
             }
-            .bottom_buttons {
-                width: 35%;
-                float: left;
-                font-size: .8em;
-                text-align: right;
-                padding-top: 1.5em;
-                margin-left: 0em;
-                padding-left: 0em;
-                a {
-                    color: $dark_gray;
-                    border: 1px solid $blue;
-                    padding: .5em 1em;
-                    border_radius: 0.2em;
-                    text-decoration: none;
-                    margin-right: 2%;
-                }
+            input[type="submit"] {
+                background: $red;
+                border: none;
+                color: $light_beige;
+                font-weight: 100;
+                padding: .5em 1em;
+                border-radius: .2em;
             }
-            .comment_content {
-                margin: 0;
-                padding: 0;
-                font-color: $dark_gray; 
-                font-size: 1.2rem;
+            textarea {
+                width: 100%;
+                min-height: 200px;
+                border: 1px solid #d1d1d1;
+                border-radius: .2em;
+                margin: 0em;
             }
-            .comment_author {
-                color: #397CAC;
-                margin-top: .5rem;
-                font-size: 0.6em;
-                font-weight: 700;
-            }
-        }
-        input[type="submit"] {
-            background: #397CAC;
-            border: none;
-            color: white;
-            font-weight: 100;
-            padding: .5em 1em;
-            border-radius: .2em;
-        }
-        textarea {
-            width: 100%;
-            min-height: 200px;
-            border: 1px solid #d1d1d1;
-            border-radius: .2em;
-            margin: 0em;
         }
     }
 }
