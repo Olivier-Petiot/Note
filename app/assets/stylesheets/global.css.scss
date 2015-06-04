@@ -17,6 +17,13 @@ $light_beige: #EDEDED;
 body {
 	padding-top: 4.5rem;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	height: 100%;
+	background: -webkit-linear-gradient(40deg, $dark_beige 0%, $light_beige 100%);
+	background:    -moz-linear-gradient(40deg, $dark_beige 0%, $light_beige 100%);
+	background:     -ms-linear-gradient(40deg, $dark_beige 0%, $light_beige 100%);
+	background:      -o-linear-gradient(40deg, $dark_beige 0%, $light_beige 100%);
+	background:         linear-gradient(40deg, $dark_beige 0%, $light_beige 100%);
+	// background: $light_beige;
 }
 
 .wrapper {
@@ -137,7 +144,9 @@ textarea {
 }
 
 .panel {
-	margin-left: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+
 	.panel-body {
 		background: $light_beige;
 		margin-bottom: 10px;
@@ -147,3 +156,16 @@ textarea {
 		color: $light_beige;
 	}
 }
+
+#notice {
+  text-align: center;
+  font-size: 0.8em;
+  color: $brown;
+  font-weight: 100;
+  // border: 1px solid $light_beige;
+  //padding: .5em 1em;
+  // border-radius: 5px;
+  display: block;
+  // margin: 1em 25%;
+}
+

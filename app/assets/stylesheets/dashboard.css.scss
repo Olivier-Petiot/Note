@@ -26,11 +26,13 @@
 		}
 	}
 	#posts {
+		background: $light_beige;		
 		.post {
-			background: $dark_beige;
+			background: $brown;
 			width: 30%;
 			min-height: 100px;
-			margin: 1rem 1%;
+			margin-left: 2rem;
+			margin-right: 2rem;
 			padding: 1.1rem 2.5%;
 			float: left;
 			border-radius: .4rem;

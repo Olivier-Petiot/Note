@@ -6,16 +6,6 @@ html {
   height: 100%;
 }
 
-body {
-  height: 100%;
-  background: -webkit-linear-gradient(40deg, #A8ABA2 15%, #EDEDED 100%);
-  background:    -moz-linear-gradient(40deg, #A8ABA2 15%, #EDEDED 100%);
-  background:     -ms-linear-gradient(40deg, #A8ABA2 15%, #EDEDED 100%);
-  background:      -o-linear-gradient(40deg, #A8ABA2 15%, #EDEDED 100%);
-  background:         linear-gradient(40deg, #A8ABA2 15%, #EDEDED 100%);
-  font-family: 'Lato', sans-serif;
-}
-
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -24,18 +14,6 @@ body {
 
 .clearfix:after {
     clear: both;
-}
-
-#notice {
-  text-align: center;
-  font-size: 0.8em;
-  color: $dark_beige;
-  font-weight: 100;
-  // border: 1px solid $light_beige;
-  //padding: .5em 1em;
-  // border-radius: 5px;
-  display: block;
-  // margin: 1em 25%;
 }
 
 .container {

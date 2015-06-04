@@ -52,34 +52,41 @@
 }
 
 #post {
-    background: $light_beige;
-    margin: 1em 1em;
     #post_content {
-        padding: 1em 5%;
+        //margin: 2em 2em;        
+        padding: 2em 2em;
         border-radius: .5em;
         background: $dark_beige;
-        h1 {
-            font-weight: 100;
-            font-size: 2em;
-            color: $red;
-            margin-top: 0;
+        #title_description {
+            border-radius: .5em;
             background: $brown;
-        }
-        p {
-            margin-top: 0.9em;
-            color: $red;
-            font-size: 1.5rem;
-            font-weight: 100;
-            line-height: 1.5em;
+            margin: .5em .5em;
+            padding: 1em 1em;
+            h1 {
+                font-weight: 100;
+                font-size: 2em;
+                color: white;
+            }
+            p {
+                margin-top: 0.9em;
+                font-size: 1.5rem;
+                font-weight: 100;
+                line-height: 1.5em;
+                color: white;
+            }
         }
         .processus {
-            padding-bottom: 1em;
-            margin-bottom: 1em;
+            //padding-bottom: 1em;
+            //margin-bottom: 1em;
+            margin-left: 1em;
             color: $red;
+            @include bold_font;
+            letter-spacing: .3px;
         }
         .rating {
             border-bottom: 1px solid #d1d1d1;
             padding-bottom: 1em;
+            margin-left: 1em;
         }
         #comments {
             .comment {
@@ -87,12 +94,18 @@
                 padding-bottom: 1em;
                 margin-bottom: 1em;
                 padding-left: 2em;
+                margin-left: 1em;
+                margin-right: 1em;
                 .content {
-                    width: 65%;
+                    width: 80%;
                     float: left;
+                    background: $light_beige;
+                    border-radius: .5em;
+                    padding-left: .5em;
+                    padding-bottom: .5em;
                 }
                 .buttons {
-                    width: 35%;
+                    width: 10%;
                     float: left;
                     font-size: .8em;
                     text-align: right;
@@ -100,7 +113,7 @@
                     margin-left: 0em;
                     a {
                         color: $light_beige;
-                        border: 1px solid $dark_beige;
+                        border: 1px solid $brown;
                         padding: .5em 1em;
                         border_radius: 0.2em;
                         text-decoration: none;
@@ -131,10 +144,24 @@
                     font-size: 1.2rem;
                 }
                 .comment_author {
-                    color: #397CAC;
+                    color: $red;
                     margin-top: .5rem;
-                    font-size: 0.6em;
+                    font-size: .8em;
                     font-weight: 700;
+                }
+                #new_comment {
+                    #comment_rating {
+                        border-radius: 0.2em;
+                        margin-left: 2em;
+                        padding-left: 2em;
+                        width: 4%;
+                    }
+                    #comment {
+                        //background: white;
+                        #comment_comment {
+                            color: black;
+                        }
+                    }
                 }
             }
             input[type="submit"] {
