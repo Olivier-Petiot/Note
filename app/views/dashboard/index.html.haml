@@ -1,3 +1,50 @@
+%a{:href => "#"}
+    Inbox
+    %span.badge
+        42
+%button.btn.btn-primary{:type => "button"}
+    Messages
+    %span.badge
+        4
+%h3
+    Example heading
+    %span.label.label-default 
+        = link_to "New Note", new_note_path
+        
+%br
+%br
+%ul.nav.nav-pills{role: "tablist"}
+    %li.active{role: "presentation"}
+        %a{href: "#"}
+            Home
+            %span.badge
+                42
+    %li{role: "presentation"}
+        %a{href: "#"} Profile
+    %li{role: "presentation"}
+        %a{href: "#"}
+            Messages
+            %span.badge
+                3
+                
+.wrapper_with_padding
+    - unless @posts.blank?
+        %h1
+            %button.btn.btn-primary{type: "button"}
+                = link_to "Active Posts", posts_path
+                
+                %span.badge
+                    = @posts.count
+    
+    
+.jumbotron
+    %h2 Posts
+    %button.btn.btn-primary{type: "button"}
+        = link_to "Active Posts", posts_path
+    .col-xs-6.col-md-3
+        %a.img-circle{ href: "#"}
+            // = image_tag("cercle bleu.png", alt: "rss feed", style: "height: 100px; width: 100px; display: block;")
+            
 .panel
     .panel-heading
         Posts
@@ -5,10 +52,12 @@
         #dashboard
             #posts
                 - unless @posts.blank?
-                    %h2
-                        Active Posts (
-                        = @posts.count
-                        )
+                    %h1
+                        %button.btn.btn-primary{type: "button"}
+                            = link_to "Active Posts", posts_path
+                            
+                            %span.badge
+                                = @posts.count
                     
                     - @posts.each do |post|
                         %a{ href: (url_for [post])}
