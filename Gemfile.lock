@@ -3,10 +3,10 @@ GEM
   specs:
     actionmailer (4.1.6)
       actionpack (= 4.1.6)
-      actionview (= 4.1.6)
+      actionview (~> 4.2.11.1)
       mail (~> 2.5, >= 2.5.4)
     actionpack (4.1.6)
-      actionview (= 4.1.6)
+      actionview (~> 4.2.11.1)
       activesupport (= 4.1.6)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
